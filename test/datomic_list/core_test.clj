@@ -41,8 +41,7 @@
     @(d/transact conn (concat list-schema-tx test-schema-tx)))
   (f)
   (d/delete-database uri)
-  (println "database " uri " deleted")
-  (d/shutdown true))
+  (println "database " uri " deleted"))
 
 (use-fixtures :once db-global-fixture)
 
